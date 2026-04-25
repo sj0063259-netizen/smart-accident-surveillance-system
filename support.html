@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Control | ADS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css\style.css">
+</head>
+<body class="dashboard-body">
+
+  <nav class="side-nav">
+  <div class="logo">ADS</div>
+  <a href="index.html" class="nav-item"><i class="fas fa-home"></i></a>
+  <a href="overview.html" class="nav-item"><i class="fas fa-info-circle"></i></a>
+  <a href="dashboard.html" class="nav-item"><i class="fas fa-microchip"></i></a>
+  <a href="support.html" class="nav-item"><i class="fas fa-shield-alt"></i></a>
+  <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i></a>
+</nav>
+
+  <main class="dashboard-content">
+    <div class="support-grid">
+      
+      <section class="glass-panel alert-zone">
+        <div class="alert-header">
+          <i class="fas fa-satellite-dish"></i>
+          <h3>Auto-Messaging System</h3>
+        </div>
+        <div class="status-box active">
+          <p>System Status: <strong>READY</strong></p>
+          <span class="pulse-red"></span>
+        </div>
+        
+        <div class="sms-preview">
+          <label>Auto-Generated Alert Message:</label>
+          <div id="smsContent" class="code-font">
+            [ALERT] Accident detected at Lat: 28.61, Lng: 77.20. SpO2: 96%. Vehicle DL01-1234. Emergency units dispatched.
+          </div>
+        </div>
+
+        <button onclick="simulateAccident()" class="trigger-btn">
+          <i class="fas fa-exclamation-circle"></i> SIMULATE ACCIDENT TRIGGER
+        </button>
+      </section>
+
+      <div class="right-col">
+        <section class="glass-panel contacts">
+          <h3><i class="fas fa-phone-alt"></i> Emergency Hub</h3>
+          <div class="contact-row">
+            <div class="c-card"><span>Ambulance</span><strong>102</strong></div>
+            <div class="c-card"><span>Police</span><strong>100</strong></div>
+          </div>
+        </section>
+
+        <section class="glass-panel">
+          <h3><i class="fas fa-edit"></i> System Grievance</h3>
+          <form class="clean-form">
+            <input type="text" placeholder="Device ID (e.g. ESP32-01)">
+            <select>
+              <option>Sensor False Alarm</option>
+              <option>GSM Delay</option>
+            </select>
+            <textarea placeholder="Describe the error..."></textarea>
+            <button type="submit" class="sub-btn">Submit Report</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function simulateAccident() {
+      const btn = document.querySelector('.trigger-btn');
+      btn.innerHTML = "SENDING ALERT...";
+      btn.style.background = "#ff4d4d";
+      
+      setTimeout(() => {
+        alert("AUTOMATED MESSAGE SENT: Message generated to Family and Hospital contacts.");
+        btn.innerHTML = "SIMULATE ACCIDENT TRIGGER";
+        btn.style.background = "rgba(255,255,255,0.1)";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

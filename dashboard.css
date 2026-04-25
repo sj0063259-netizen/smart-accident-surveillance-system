@@ -1,0 +1,241 @@
+/* --- General Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Brighter Dashboard Layout --- */
+.dashboard-body {
+  /* Using a dark navy instead of black to create better contrast with white text */
+  background: radial-gradient(circle at top right, #1e1e2f, #12121c);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* --- Brighter Side Nav --- */
+.side-nav {
+  width: 90px;
+  background: rgba(255, 255, 255, 0.08); /* Brighter glass effect */
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  gap: 35px;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: 800;
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-item.active, 
+.nav-item:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+/* --- Main Content Area --- */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.dash-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* --- High Visibility Status Indicator --- */
+.status-indicator {
+  background: rgba(46, 204, 113, 0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #2ecc71; /* Brighter Emerald Green */
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.1);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #2ecc71;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 10px #2ecc71;
+}
+
+/* --- Stats Cards Grid --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.12); /* Increased opacity for visibility */
+  padding: 30px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card i {
+  font-size: 42px;
+  color: #ffcc00; /* Vivid Gold */
+  filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.3));
+}
+
+.stat-info label {
+  font-size: 13px;
+  color: #ccd0d5; /* Lighter text for secondary labels */
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stat-info h3 {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.stat-info span {
+  font-size: 16px;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+/* --- Main Content Grid --- */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* --- Brighter Map Container --- */
+.map-placeholder {
+  height: 400px;
+  background: #252535;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://user-images.githubusercontent.com/14101776/95410143-69022680-095a-11eb-8c88-518290e290f6.png');
+  background-size: cover;
+  border-radius: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.map-overlay {
+  background: rgba(20, 20, 30, 0.95);
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #ffcc00;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.map-overlay p {
+  color: #ffcc00;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.map-overlay span {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* --- Brighter Log Box --- */
+.log-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.log-box {
+  height: 400px;
+  overflow-y: auto;
+  background: #0d0d12;
+  padding: 20px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+.log-entry {
+  margin-bottom: 10px;
+  color: #00ff9d; /* Vivid Neon Green */
+  opacity: 1; /* Full opacity for readability */
+  line-height: 1.4;
+}
+#map {
+    width: 100%;
+    z-index: 1; /* Ensures it stays behind nav dropdowns but above background */
+    border: 2px solid rgba(255, 204, 0, 0.5);
+}
+
+/* Fix for Leaflet dark mode visibility */
+.leaflet-container {
+    background: #12121c !important;
+}
+/* Scrollbar Styling for Logs */
+.log-box::-webkit-scrollbar {
+  width: 6px;
+}
+.log-box::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.text-success { color: #2ecc71; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}

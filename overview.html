@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Accident Detection System</title>
+  <link rel="stylesheet" href="css\overview.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="page-header">
+    <div class="header-content">
+      <h1>🚗 Smart Accident Detection System</h1>
+      <p class="tagline">Saving lives through instant automated response</p>
+    </div>
+  </header>
+
+  <main class="overview-container">
+    
+    <div class="grid-container">
+      <section class="overview-section card">
+        <h2>⚠️ Problem Statement</h2>
+        <p>Road accidents often go undetected in critical moments. Delays in emergency response significantly decrease survival chances and can lead to secondary collisions.</p>
+      </section>
+
+      <section class="overview-section card">
+        <h2>💡 Our Solution</h2>
+        <p>An integrated IoT system that automatically detects impacts, captures health vitals (SpO₂), and broadcasts live location to hospitals and nearby vehicles instantly.</p>
+      </section>
+    </div>
+
+    <section class="overview-section glass-panel">
+      <h2>🔧 How the System Works</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Detection</h3>
+          <p>Gyroscope monitors orientation & impact. ESP32 processes anomalies instantly.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Vitals & GPS</h3>
+          <p>GPS grabs coordinates while sensors measure victim's Oxygen (SpO₂).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Alerts</h3>
+          <p>GSM sends data to family/hospitals. Nearby vehicles are alerted via local signal.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-container">
+      <section class="overview-section card">
+        <h2>🛠️ Components</h2>
+        <ul class="components-list">
+          <li><strong>ESP32:</strong> The Brain (Microcontroller)</li>
+          <li><strong>GSM Module:</strong> Emergency SMS/Alerts</li>
+          <li><strong>GPS Module:</strong> Real-time Location</li>
+          <li><strong>Gyroscope:</strong> Collision Detection</li>
+          <li><strong>L298N:</strong> Vehicle Control/Safe Stop</li>
+        </ul>
+      </section>
+
+      <section class="overview-section card">
+        <h2>📊 System Flowchart</h2>
+        <img src="assets\images\flowchart.png" alt="System Flowchart" class="flowchart">
+      </section>
+    </div>
+
+    <section class="overview-section">
+      <h2>🚀 Key Features & Impact</h2>
+      <div class="features-grid">
+        <div class="feature-tag">Automatic Detection</div>
+        <div class="feature-tag">Real-time GPS</div>
+        <div class="feature-tag">Health Monitoring (SpO₂)</div>
+        <div class="feature-tag">100m Range Local Alert</div>
+        <div class="feature-tag">Faster Response Time</div>
+        <div class="feature-tag">Prevents Secondary Crashes</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Smart Accident Detection Project &copy; 2024</p>
+  </footer>
+
+</body>
+</html>
